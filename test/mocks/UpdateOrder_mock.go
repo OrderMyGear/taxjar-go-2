@@ -2,7 +2,7 @@ package mocks
 
 import (
 	"encoding/json"
-	"github.com/taxjar/taxjar-go"
+	"github.com/OrderMyGear/taxjar-go-2"
 )
 
 // UpdateOrder - mock response

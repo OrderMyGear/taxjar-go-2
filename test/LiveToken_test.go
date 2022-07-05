@@ -3,9 +3,9 @@ package test
 import (
 	"os"
 
+	"github.com/OrderMyGear/taxjar-go-2"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	"github.com/taxjar/taxjar-go"
 )
 
 var _ = Describe("using a live/sandbox token", func() {

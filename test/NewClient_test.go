@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/taxjar/taxjar-go"
+	"github.com/OrderMyGear/taxjar-go-2"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

@@ -1,4 +1,4 @@
-module github.com/taxjar/taxjar-go
+module github.com/OrderMyGear/taxjar-go-2
 
 go 1.12
 

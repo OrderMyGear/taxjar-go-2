@@ -13,3 +13,6 @@
 
 # Ignoring vendor dir since this is a library
 vendor
+
+/dev.env
+.idea

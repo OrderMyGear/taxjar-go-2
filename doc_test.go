@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/OrderMyGear/taxjar-go-2"
 	"github.com/pkg/errors"
-	"github.com/taxjar/taxjar-go"
 )
 
 var client = taxjar.NewClient()

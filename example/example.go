@@ -4,10 +4,15 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/taxjar/taxjar-go"
+	"github.com/OrderMyGear/taxjar-go-2"
 )
 
 func main() {
+	TaxJarExample()
+	OldOrderMyGearExample()
+}
+
+func TaxJarExample() {
 	client := taxjar.NewClient(taxjar.Config{
 		APIKey: os.Getenv("TAXJAR_API_KEY"),
 	})
@@ -297,4 +302,49 @@ func main() {
 		fmt.Println(err)
 	}
 	fmt.Printf("\n\nSummaryRates %+v", res22.SummaryRates)
+}
+
+func OldOrderMyGearExample() {
+	c := taxjar.NewClient()
+
+	// Get rates at specific ZIP with an optional city specifier
+	// rate, err := c.Rates.Get("12901", taxjar.RateCity("Plattsburgh"))
+	// if nil != err {
+	// 	fmt.Println(err)
+	// 	os.Exit(1)
+	// }
+	// fmt.Printf("%+v\n", rate)
+
+	from := taxjar.Address{
+		Street:  "2211 Commerce St.",
+		City:    "Dallas",
+		State:   "TX",
+		Zip:     "75201",
+		Country: "US",
+	}
+	to := taxjar.Address{
+		State:   "TX",
+		Zip:     "75206",
+		Country: "US",
+	}
+	params := taxjar.TaxForOrderParams{
+		FromCountry: from.Country,
+		FromZip:     from.Zip,
+		FromState:   from.State,
+		FromCity:    from.City,
+		FromStreet:  from.Street,
+		ToCountry:   to.Country,
+		ToZip:       to.Zip,
+		ToState:     to.State,
+		ToCity:      to.City,
+		ToStreet:    to.Street,
+		Amount:      100.00,
+		Shipping:    10.00,
+	}
+	taxes, err := c.TaxForOrder(params)
+	if nil != err {
+		fmt.Println(err)
+		os.Exit(1)
+	}
+	fmt.Printf("%+v\n", taxes)
 }

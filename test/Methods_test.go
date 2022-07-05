@@ -4,11 +4,11 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/OrderMyGear/taxjar-go-2"
+	"github.com/OrderMyGear/taxjar-go-2/test/mocks"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	"github.com/onsi/gomega/ghttp"
-	"github.com/taxjar/taxjar-go"
-	"github.com/taxjar/taxjar-go/test/mocks"
 )
 
 var IsLiveTestRun = os.Getenv("TAXJAR_API_KEY") != ""
