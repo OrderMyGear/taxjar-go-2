@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/OrderMyGear/taxjar-go-2"
+	"github.com/OrderMyGear/taxjar-go"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/OrderMyGear/taxjar-go-2"
-	"github.com/OrderMyGear/taxjar-go-2/test/mocks"
+	"github.com/OrderMyGear/taxjar-go"
+	"github.com/OrderMyGear/taxjar-go/test/mocks"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	"github.com/onsi/gomega/ghttp"
